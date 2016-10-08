@@ -24,3 +24,9 @@ wpApp.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: appInfo.template_directory + 'assets/templates/list.html'
         });
 });
+
+wpApp.filter('to_trusted', ['$sce', function($sce) {
+    return function (t) {
+        return $sce.trustAsHtml(t);
+    }
+}]);
