@@ -25,7 +25,7 @@
 				</h1>
 			</div>
 			<div class="col-sm-4 col-sm-offset-1">
-				<span>by: <a href="http://www.roysivan.com">Roy Sivan</a></span>
+				<span>by: <a href="http://www.tmosest.com">Tyler Moses</a></span>
 			</div>
 		</div>
 </header>
