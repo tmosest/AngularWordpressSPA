@@ -21,10 +21,22 @@ class wp_ng_theme {
 		);
 		
 	}
+
+	function register_new_field() {
+		register_api_field('post', 
+			'my_awesome_field',
+			array(
+				'get_callback' => array($this, 'awesome_field') 
+			)
+		);
+	}
 	
+	function awesome_field($object, $field_name, $request) {
+		return 'My awesome string';
+	}
 }
 
 $ngTheme = new wp_ng_theme();
 add_action( 'wp_enqueue_scripts', array( $ngTheme, 'enqueue_scripts' ) );
-
+add_action('rest_api_init', array($ngTheme, 'register_new_field'));
 ?>
